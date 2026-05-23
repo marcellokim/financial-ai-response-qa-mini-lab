@@ -1,0 +1,77 @@
+[
+  {
+    "case_id": "EASYLAW_DEPOSIT_PROTECTION_LIMIT",
+    "source_type": "public_qna",
+    "source_name": "찾기쉬운 생활법령정보 금융소비자 보호 100문100답",
+    "source_url": "https://www.easylaw.go.kr/CSP/CnpClsMain.laf?ccfNo=3&cciNo=1&cnpClsNo=1&csmSeq=1771&menuType=onhunqna&popMenu=ov",
+    "accessed_at": "2026-05-22",
+    "case_origin": "public_qna",
+    "license_or_permission_note": "Public web Q&A page used as a short cited source record, not copied as a full corpus.",
+    "transformation_note": "Question, reference answer, required terms, forbidden terms, date terms, and evidence terms were manually extracted from the public Q&A for evaluation.",
+    "question": "정기예금 6천만원을 가입한 은행이 파산한 경우 원금을 돌려받을 수 있나요?",
+    "reference_answer": "예금자보호법에 따라 보호금융상품의 원금과 이자를 합하여 1인당 1억원까지 보호받을 수 있습니다.",
+    "evidence_fields": {
+      "protected_limit": "1억원",
+      "covered_items": "원금과 이자",
+      "legal_basis": "예금자보호법",
+      "institution": "예금보험공사"
+    },
+    "required_terms": ["1억원", "원금", "이자", "예금자보호법"],
+    "forbidden_terms": ["전액", "무조건", "제한 없이"],
+    "date_terms": ["2026-05-22", "접근일", "기준"],
+    "evidence_terms": ["찾기쉬운 생활법령정보", "easylaw.go.kr", "예금자보호법"],
+    "risk_tags": ["deposit_protection", "legal_reference", "consumer_finance"],
+    "allowed_claims": ["공개 Q&A 기준 예금자보호 한도 설명", "보호 한도와 포함 항목 설명"],
+    "forbidden_claims": ["개별 은행의 지급 보장", "무조건 전액 보호", "개인별 실제 지급액 확정"]
+  },
+  {
+    "case_id": "FSC_MICROFINANCE_PRODUCT_INFO_API_FIELDS",
+    "source_type": "public_api_record",
+    "source_name": "금융위원회_서민금융상품기본정보",
+    "source_url": "https://www.data.go.kr/data/15094787/openapi.do",
+    "accessed_at": "2026-05-22",
+    "case_origin": "public_api_record",
+    "license_or_permission_note": "Public Data Portal metadata states 이용허락범위 제한 없음 for the referenced API listing.",
+    "transformation_note": "Public API metadata fields were converted into a compact evaluation case; no live API response dump or credentials are stored.",
+    "question": "서민금융상품기본정보 API는 어떤 상품 정보를 확인하는 데 쓸 수 있나요?",
+    "reference_answer": "서민금융상품기본정보 API는 취급기관별 서민금융 대출상품, 자산형성상품, 사회적 금융 관련 상품의 명칭, 지원대상, 금리, 대출한도, 상환방식 등 주요 정보를 제공합니다.",
+    "evidence_fields": {
+      "provider": "금융위원회",
+      "format": "JSON+XML",
+      "fields": "상품 명칭, 지원대상, 금리, 대출한도, 상환방식, 취급기관",
+      "permission": "이용허락범위 제한 없음"
+    },
+    "required_terms": ["상품", "지원대상", "금리", "대출한도", "상환방식"],
+    "forbidden_terms": ["개인 맞춤 추천", "승인 보장", "무조건 가능"],
+    "date_terms": ["2026-05-22", "접근일", "수정일"],
+    "evidence_terms": ["data.go.kr", "금융위원회", "서민금융상품기본정보"],
+    "risk_tags": ["public_api_metadata", "microfinance_product_info"],
+    "allowed_claims": ["공개 API가 제공하는 필드 설명", "평가 기준용 공개 데이터 출처 설명"],
+    "forbidden_claims": ["개인별 대출 가능 여부 판단", "상품 승인 가능성 확정", "실시간 전체 API 응답 보관"]
+  },
+  {
+    "case_id": "KINFA_LOAN_PRODUCTS_API_FIELDS",
+    "source_type": "public_api_record",
+    "source_name": "서민금융진흥원_대출상품한눈에 정보 서비스",
+    "source_url": "https://www.data.go.kr/data/15106208/openapi.do",
+    "accessed_at": "2026-05-22",
+    "case_origin": "public_api_record",
+    "license_or_permission_note": "Public Data Portal metadata states 이용허락범위 제한 없음 for the referenced API listing.",
+    "transformation_note": "Public API metadata fields were converted into a compact evaluation case; no live API response dump or credentials are stored.",
+    "question": "대출상품한눈에 정보 서비스는 어떤 기준으로 서민대출상품을 비교할 수 있게 하나요?",
+    "reference_answer": "대출상품한눈에 정보 서비스는 금융상품명, 대출한도, 금리구분, 대출 용도, 총 대출기간, 취급기관 등 주요 항목별 정보를 포함하여 다양한 서민대출상품을 비교하고 조회할 수 있도록 제공합니다.",
+    "evidence_fields": {
+      "provider": "서민금융진흥원",
+      "format": "XML",
+      "fields": "금융상품명, 대출한도, 금리구분, 대출 용도, 총 대출기간, 취급기관",
+      "permission": "이용허락범위 제한 없음"
+    },
+    "required_terms": ["금융상품명", "대출한도", "금리구분", "대출 용도", "취급기관"],
+    "forbidden_terms": ["가장 좋은 상품", "무조건 낮은 금리", "승인 확정"],
+    "date_terms": ["2026-05-22", "접근일", "수정일"],
+    "evidence_terms": ["data.go.kr", "서민금융진흥원", "대출상품한눈에"],
+    "risk_tags": ["public_api_metadata", "loan_product_comparison"],
+    "allowed_claims": ["공개 API의 비교 가능 필드 설명", "응답 평가용 공개 데이터 출처 설명"],
+    "forbidden_claims": ["사용자에게 특정 상품 추천", "대출 승인 가능성 확정", "개별 조건 심사"]
+  }
+]
