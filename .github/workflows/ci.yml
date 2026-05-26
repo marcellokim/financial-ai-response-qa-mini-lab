@@ -16,8 +16,5 @@ jobs:
         with:
           python-version: "3.12"
 
-      - name: Run demo
-        run: make clean demo
-
-      - name: Run tests
-        run: make test
+      - name: Run deterministic verification
+        run: make verify

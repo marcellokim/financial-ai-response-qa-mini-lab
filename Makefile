@@ -1,6 +1,8 @@
-.PHONY: demo normalize evaluate report test clean
+.PHONY: verify demo normalize evaluate report test clean
 
 PYTHON ?= python3
+
+verify: clean demo test
 
 demo:
 	$(PYTHON) -m financial_ai_qa.cli demo

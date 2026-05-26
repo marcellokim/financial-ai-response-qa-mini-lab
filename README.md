@@ -34,11 +34,10 @@ It is built as a portfolio-safe mini lab: small enough to inspect quickly, but c
 ```bash
 git clone https://github.com/marcellokim/financial-ai-response-qa-mini-lab.git
 cd financial-ai-response-qa-mini-lab
-make demo
-make test
+make verify
 ```
 
-`make demo` normalizes curated public-source records, evaluates public-source-derived response variants, and writes `reports/sample_report.md`.
+`make verify` removes generated files, normalizes curated public-source records, evaluates public-source-derived response variants, writes `reports/sample_report.md`, and runs the full test suite.
 
 Expected demo summary:
 
@@ -87,7 +86,7 @@ See `data_sources.md` for the source catalog and credential rule.
 
 ## Verification
 
-Last local verification: 2026-05-23 KST.
+Last local verification: 2026-05-26 KST.
 
 ```bash
 make clean && make demo && make test
